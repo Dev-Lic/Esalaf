@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="352.0" prefWidth="464.0" spacing="20.0" style="-fx-background-color: #0097b2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.ClientController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="Nom" />
+   <TextField fx:id="nom" />
+   <Label text="Telephone :" />
+   <TextField fx:id="tele" />
+   <TextField fx:id="idClient" onMouseClicked="#getSelected" opacity="0.0" />
+   <ButtonBar prefHeight="40.0" prefWidth="200.0">
+     <buttons>
+      
+      
+          <Button fx:id="ok" onAction="#onSaveButtonClick" text="Save!">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#OnEditButtonClick" text="Edit" />
+         <Button fx:id="delete" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+         <Button fx:id="home" mnemonicParsing="false" onAction="#OnGoHomeClick" text="Home" />
+     </buttons>
+   </ButtonBar>
+
+   <TableView fx:id="mytab" onMouseClicked="#getSelected" prefHeight="200.0" prefWidth="200.0">
+     <columns>
+       <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
+         <TableColumn fx:id="col_nom" prefWidth="75.0" text="Nom" />
+         <TableColumn fx:id="col_tele" prefWidth="75.0" text="Tele" />
+     </columns>
+   </TableView>
+</VBox>
